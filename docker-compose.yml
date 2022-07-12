@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  ssh-survey:
+    container_name: ssh-survey
+    build: .
+    restart: "no"
+    volumes:
+      - "./config:/opt/config:ro,z"
+      - "./results:/home/survey:rw,z"
+    ports:
+      - "8808:22/tcp"
