@@ -6,7 +6,7 @@ services:
     build: .
     restart: "no"
     volumes:
-      - "./config:/opt/config:ro,z"
-      - "./results:/home/survey:rw,z"
+      - "./opt:/opt:ro,z"
+      - "./home:/home/survey:rw,z"
     ports:
       - "8808:22/tcp"
