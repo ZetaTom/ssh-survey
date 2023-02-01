@@ -13,4 +13,4 @@ if [ ! -f /opt/dropbear_ecdsa_host_key ]; then
 else
 	ln -s /opt/dropbear_ecdsa_host_key /etc/dropbear/dropbear_ecdsa_host_key
 fi
-dropbear -F -E -w -T 2 -j -k -G survey -c "sh /opt/survey.sh ${homedir} ${deadli
+dropbear -F -E -w -T 2 -j -k -G survey -c "sh /opt/survey.sh ${homedir} ${deadline}"
